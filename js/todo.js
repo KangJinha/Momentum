@@ -14,6 +14,7 @@ function saveToDos() {
 
 function deleteToDo(event) {
     const li = event.target.parentElement;//버튼의 부모는 li
+    console.log(li)
     li.remove();
     toDos = toDos.filter((toDo) => toDo.id !== parseInt(li.id));
     saveToDos();

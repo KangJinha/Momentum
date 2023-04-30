@@ -22,6 +22,11 @@ body{
 }
 input {
   background-color:transparent;
+  color: white;
+  caret-color: white;
+  border: none;
+  border-bottom: 5px solid white;
+  height: 50px;
 }
 input:hover {
   transform: scale(1.05);
@@ -34,7 +39,14 @@ input::placeholder {
   color: white;
   opacity: 1;
 }
-
+input:focus {
+  font-size: 30px;
+  font-weight: 500;
+  outline:none;
+}
+input:focus::placeholder {
+  color: transparent;
+}
 #bgImage {
   z-index: -5;
   position: absolute;
@@ -76,15 +88,8 @@ input::placeholder {
   display: none;
 }
 #login-form input {
-  height: 40px;
   width: 250px;
-  border-radius: 10px;
-  border: none;
   text-align: center;
-  color: black;
-}
-#login-form input:focus {
-  outline:none;
 }
 
 #greeting {
@@ -110,7 +115,7 @@ input::placeholder {
   flex-direction: column;
   /* 왜 form에는 이게 안먹히지? */
   align-items: center;
-  height: 440px;
+  height: 420px;
 }
 #clock {
   color: rgb(165, 190, 242);
@@ -131,15 +136,9 @@ input::placeholder {
   /* box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.25); */
 }
 #todo-form input {
-  height: 40px;
   width: 100%;
-  border-radius: 10px;
-  border: none;
   text-align: center;
-  color: black;
-}
-#todo-form input:focus {
-  outline:none;
+  border: none;
 }
 
 li {
