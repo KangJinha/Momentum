@@ -1,96 +1,144 @@
+@import "reset.css";
 
 .hidden {
-    display: none;
+  display: none;
 }
 
 #bgImage {
-    z-index: -5;
-    position: absolute;
-    height: 100vh;
-    width: 100vw;
-    filter: brightness(80%);
-    top: 0;
-    left: 0;
-}
-#login-form {
-    justify-content: center;
-    align-items: start;
-}
-#greeting {
-    padding-left: 50px;
-    color: white;
-}
-#weather {
-    font-weight: 1000;
-    font-size: 20px;
-    color: white;
-    display: flex;
-    flex-direction: column;
-    align-items: end;
-    margin-right: 50px;
-}
-#clock {
-    color: white;
-    font-size: 100px;
-    font-family: 'Franklin Gothic Medium', 
-    'Arial Narrow', Arial, sans-serif;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-#todo-form {
-    display: flex;
-    justify-content: center;
-    opacity: 80%;
-    transition: all 0.3s ease-in-out;
-    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.25);
-}
-#todo-form:hover{
-    transform: scale(1.1);
-}
-#quote {
-    font-weight: bold;
-    font-family: Georgia, 'Times New Roman', Times, serif;
-    color: white;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    opacity: 0.8;
-    font-size: 20px;
-    margin-top: 160px;
-}
-
-input {
-    height: 30px;
-    width: 200px;
-    border-radius: 10px;
-    border: 1px solid white;
-    text-align: center;
-}
-
-footer{
-    bottom: 0;
+  z-index: -5;
+  position: absolute;
+  height: 100vh;
+  width: 100vw;
+  filter: brightness(80%);
+  top: 0;
+  left: 0;
+  box-sizing: border-box;
 }
 
 #reload {
-    display: inline-block;
-    padding: 10px 20px;
-    font-size: 16px;
-    font-weight: bold;
-    color: black;
-    text-align: center;
-    text-decoration: none;
-    background-color: white;
-    border-radius: 10%;
-    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.25);
-    border: none;
-    cursor: pointer;
-    transition: all 0.3s ease-in-out;
-    opacity: 20%;
+  margin: 30px;
+  display: inline-block;
+  padding: 5px 15px;
+  font-size: 20px;
+  color: black;
+  text-align: center;
+  text-decoration: none;
+  background-color: skyblue;
+  border-radius: 10%;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.25);
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  opacity: 40%;
 }
-  
+
 #reload:hover {
-    background-color: white;
-    transform: scale(1.1);
+  background-color: white;
+  transform: scale(1.1);
+}
+
+#login-form button {
+  display: none;
+}
+#greeting {
+  padding-left: 50px;
+  color: white;
+  font-weight: 600;
+  font-size: 20px;
+}
+#weather {
+  font-weight: 600;
+  font-size: 20px;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: end;
+  margin-top: 40px;
+  margin-right: 50px;
+}
+.clock-todoList {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  /* 왜 form에는 이게 안먹히지? */
+  align-items: center;
+}
+#clock {
+  color: white;
+  font-size: 150px;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  margin-bottom: 50px;
+  margin-top: 50px;
+}
+#todo-form {
+  opacity: 70%;
+  transition: all 0.3s ease-in-out;
+  height: 30px;
+  width: 200px;
+  border-radius: 10px;
+  border: 1px solid white;
+  text-align: center;
+  /* box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.25); */
+}
+#todo-form:hover {
+  transform: scale(1.1);
+}
+#quote {
+  font-weight: bold;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  opacity: 0.8;
+  font-size: 20px;
+  margin-top: 180px;
+}
+#quote span:first-child {
+  margin-bottom: 10px;
+}
+
+input {
+  height: 30px;
+  width: 200px;
+  border-radius: 10px;
+  border: 1px solid white;
+  text-align: center;
+  color: black;
+}
+
+footer {
+  bottom: 0;
+}
+
+@keyframes hideSplashScreen {
+  from {
+      opacity: 1;
   }
+  to {
+      opacity: 0;
+      visibility: hidden;
+  }
+}
+/* visibility 마우스에 걸리지않게 빠져버림 */
+#splash-screen {
+  background-image: url('../img/겨울왕국.jpg');
+  background-repeat: no-repeat;
+  background-size: 100% 100vh;
+  background-color: var(--green);
+  position: absolute;
+  height: 100vh;
+  width: 100vw;
+  top: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 128px;
+  animation: hideSplashScreen 0.3s ease-in-out forwards;
+  animation-delay: 1.5s;
+}
+
+/* <div id="splash-screen">
+        <i class="fa-solid fa-comment" style="color: var(--green);"></i>
+    </div> */
