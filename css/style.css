@@ -92,6 +92,7 @@ input::placeholder {
   color: white;
   font-weight: 600;
   font-size: 20px;
+  height: 40px;
 }
 #weather {
   font-weight: 600;
