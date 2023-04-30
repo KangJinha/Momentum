@@ -1,9 +1,9 @@
 const images = [
-  "겨울왕국.jpg",
-  "미니언즈.jpg",
-  "알라딘.jpg",
-  "토이스토리.jpg",
-  "토이스토리2.jpg",
+  "../img/겨울왕국.jpg",
+  "../img/미니언즈.jpg",
+  "../img/알라딘.jpg",
+  "../img/토이스토리.jpg",
+  "../img/토이스토리2.jpg",
 ];
 
 const chosenImage = images[Math.floor(Math.random() * images.length)];
