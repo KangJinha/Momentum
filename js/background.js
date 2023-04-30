@@ -1,7 +1,6 @@
 const images = [
   "../img/겨울왕국.jpg",
   "../img/미니언즈.jpg",
-  "../img/알라딘.jpg",
   "../img/토이스토리.jpg",
   "../img/토이스토리2.jpg",
 ];

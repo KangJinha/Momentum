@@ -15,7 +15,7 @@ function saveToDos() {
 function deleteToDo(event) {
     const li = event.target.parentElement;//버튼의 부모는 li
     li.remove();
-    toDos = toDos.filter(toDo => toDo.id !== parseInt(li.id));
+    toDos = toDos.filter((toDo) => toDo.id !== parseInt(li.id));
     saveToDos();
 }
 //li태그안에 span,button 생성
@@ -26,7 +26,7 @@ function paintToDo(newTodo) {
     const span = document.createElement("span");
     span.innerText = newTodo.text;
     const button = document.createElement("button");
-    button.innerText = "🔨";
+    button.innerHTML = `<i class="fa-solid fa-eraser"></i>`;
     button.addEventListener("click", deleteToDo)
     li.appendChild(span);
     li.appendChild(button);
