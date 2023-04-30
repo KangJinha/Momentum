@@ -1,7 +1,38 @@
 @import "./reset.css";
 
+@font-face {
+  font-family: 'NeoDunggeunmoPro-Regular';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2302@1.0/NeoDunggeunmoPro-Regular.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'KCCChassam';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2302@1.0/KCCChassam.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+
+body{
+  font-family: 'KCCChassam';
+}
+
 .hidden {
   display: none;
+}
+input {
+  background-color:transparent;
+}
+input:hover {
+  transform: scale(1.05);
+  animation: 0.5s ease-in-out;
+}
+input::placeholder {
+  font-family: 'KCCChassam';
+  font-size: 30px;
+  font-weight: 500;
+  color: white;
+  opacity: 1;
 }
 
 #bgImage {
@@ -9,7 +40,7 @@
   position: absolute;
   height: 100vh;
   width: 100vw;
-  filter: brightness(80%);
+  filter: brightness(70%);
   top: 0;
   left: 0;
   box-sizing: border-box;
@@ -23,7 +54,7 @@
   color: black;
   text-align: center;
   text-decoration: none;
-  background-color: skyblue;
+  background-color: rgb(191, 233, 250);
   border-radius: 10%;
   box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.25);
   border: none;
@@ -36,10 +67,26 @@
   background-color: white;
   transform: scale(1.1);
 }
-
+#login-form {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
 #login-form button {
   display: none;
 }
+#login-form input {
+  height: 40px;
+  width: 250px;
+  border-radius: 10px;
+  border: none;
+  text-align: center;
+  color: black;
+}
+#login-form input:focus {
+  outline:none;
+}
+
 #greeting {
   padding-left: 50px;
   color: white;
@@ -48,64 +95,71 @@
 }
 #weather {
   font-weight: 600;
-  font-size: 20px;
+  font-size: 25px;
   color: white;
   display: flex;
   flex-direction: column;
   align-items: end;
   margin-top: 40px;
   margin-right: 50px;
+  opacity: 0.8;
 }
 .clock-todoList {
   display: flex;
   flex-direction: column;
-  justify-content: center;
   /* 왜 form에는 이게 안먹히지? */
   align-items: center;
+  height: 440px;
 }
 #clock {
-  color: white;
+  color: rgb(165, 190, 242);
   font-size: 150px;
-  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  font-weight: 600;
   margin-bottom: 50px;
-  margin-top: 50px;
+  background: linear-gradient(to right top, rgb(255, 197, 207), rgb(142, 221, 255));
+    color: transparent;
+    -webkit-background-clip: text;
 }
 #todo-form {
-  opacity: 70%;
-  transition: all 0.3s ease-in-out;
-  height: 30px;
-  width: 200px;
+  display: flex;
+  justify-content: center;
+  width: 500px;
   border-radius: 10px;
-  border: 1px solid white;
   text-align: center;
   /* box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.25); */
 }
-#todo-form:hover {
-  transform: scale(1.1);
+#todo-form input {
+  height: 40px;
+  width: 100%;
+  border-radius: 10px;
+  border: none;
+  text-align: center;
+  color: black;
 }
+#todo-form input:focus {
+  outline:none;
+}
+
+li {
+  font-size: 18px;
+  color: white;
+  font-weight: 600;
+}
+
 #quote {
   font-weight: bold;
-  font-family: Georgia, "Times New Roman", Times, serif;
   color: white;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  opacity: 0.8;
+  opacity: 0.7;
   font-size: 20px;
-  margin-top: 180px;
+  margin-top: 0px;
 }
 #quote span:first-child {
   margin-bottom: 10px;
-}
-
-input {
-  height: 30px;
-  width: 200px;
-  border-radius: 10px;
-  border: 1px solid white;
-  text-align: center;
-  color: black;
 }
 
 footer {
@@ -123,10 +177,9 @@ footer {
 }
 /* visibility 마우스에 걸리지않게 빠져버림 */
 #splash-screen {
-  background-image: url('../img/겨울왕국.jpg');
+  background-image: url('../img/토이스토리.jpg');
   background-repeat: no-repeat;
   background-size: 100% 100vh;
-  background-color: var(--green);
   position: absolute;
   height: 100vh;
   width: 100vw;
@@ -134,7 +187,6 @@ footer {
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 128px;
   animation: hideSplashScreen 0.3s ease-in-out forwards;
   animation-delay: 1.5s;
 }

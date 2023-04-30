@@ -28,9 +28,11 @@ article, aside, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section {
 	display: block;
 }
+* {
+	box-sizing: border-box;
+}
 body {
 	line-height: 1;
-	box-sizing: border-box;
 	/* padding,margin,transform 을 주건 상관없이 
 	주어진 body크기 안에서 벗어나지 않는다 */
 }

@@ -1,6 +1,3 @@
-//위치정보오류잡기!
-
-
 const API_KEY = "99aa7d857c4cc6f52aeccac6d088bed1";
 
 function onGeoOk(position) {
@@ -12,9 +9,10 @@ function onGeoOk(position) {
         .then((response) => response.json())
         .then((data) => {
             const weather = document.querySelector("#weather span:first-child")
-            const city = document.querySelector("#weather span:last-child")
+            const city = document.querySelector("#weather span:nth-child(2)")
+            const icon = document.querySelector("#weather span:last-child")
             weather.innerText = `${data.weather[0].main} / ${data.main.temp}`;
-            city.innerText = data.name;
+            city.innerText = data.name;     
         })
 }
 
